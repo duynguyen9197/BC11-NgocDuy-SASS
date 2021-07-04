@@ -5,7 +5,7 @@
     size: cover;
     position: center bottom;
   }
-  padding: $pd-2;
+  padding: $pd-2 0;
   .Carousel_content {
     display: flex;
     justify-content: center;
@@ -14,6 +14,9 @@
 
     .content--left {
       width: $width-50;
+      @include responsive(medium-down) {
+        width: 100%;
+      }
       h1 {
         @include styleText($fs-4, $fw-2, $color-blue-2);
       }
@@ -28,6 +31,9 @@
     .content--right {
       text-align: right;
       @extend .content--left;
+      @include responsive(medium-down) {
+        display: none;
+      }
     }
   }
 }

@@ -68,6 +68,16 @@ header .navbar .navbar-brand {
   color: #2a73dd;
 }
 
+header .navbar .navbar-toggler {
+  outline: none;
+}
+
+header .navbar .navbar-toggler .navbar-toggler-icon {
+  color: #1d365e;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
 header .navbar-nav li:active a {
   font-size: 1.1rem;
   font-weight: 600;
@@ -80,6 +90,12 @@ header .navbar-nav li:active a::after {
 
 header .navbar-nav li {
   padding: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  header .navbar-nav li {
+    text-align: center;
+  }
 }
 
 header .navbar-nav li a {
@@ -108,12 +124,22 @@ header .navbar-nav li a:hover::after {
   transform: scaleX(1);
 }
 
+@media screen and (max-width: 576px) {
+  header .navbar {
+    padding: 16px 26px;
+  }
+  header .navbar .navbar-brand {
+    font-size: 44px;
+    line-height: 2.5rem;
+  }
+}
+
 .Carousel {
   background-image: url(./../../image/product-header-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
-  padding: 225px;
+  padding: 225px 0;
 }
 
 .Carousel .Carousel_content {
@@ -124,6 +150,12 @@ header .navbar-nav li a:hover::after {
 
 .Carousel .Carousel_content .content--left, .Carousel .Carousel_content .content--right {
   width: 50%;
+}
+
+@media screen and (max-width: 767.98px) {
+  .Carousel .Carousel_content .content--left, .Carousel .Carousel_content .content--right {
+    width: 100%;
+  }
 }
 
 .Carousel .Carousel_content .content--left h1, .Carousel .Carousel_content .content--right h1 {
@@ -147,6 +179,12 @@ header .navbar-nav li a:hover::after {
 
 .Carousel .Carousel_content .content--right {
   text-align: right;
+}
+
+@media screen and (max-width: 767.98px) {
+  .Carousel .Carousel_content .content--right {
+    display: none;
+  }
 }
 
 .Product {
@@ -173,6 +211,18 @@ header .navbar-nav li a:hover::after {
   padding: 30px;
   margin-bottom: 25px;
   width: 30%;
+}
+
+@media screen and (max-width: 991.98px) {
+  .Product .Product__content .Product__item {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .Product .Product__content .Product__item {
+    width: 100%;
+  }
 }
 
 .Product .Product__content .Product__item img {
@@ -211,6 +261,8 @@ footer {
 
 footer img {
   background-color: #2a73dd;
+  position: relative;
+  top: -19px;
 }
 
 footer .footer__content {
@@ -235,6 +287,12 @@ footer .footer__content ul {
 footer .footer__content ul li {
   display: inline-block;
   padding: 25px;
+}
+
+@media screen and (max-width: 767.98px) {
+  footer .footer__content ul li {
+    padding: 8px;
+  }
 }
 
 footer .footer__content ul li:hover {

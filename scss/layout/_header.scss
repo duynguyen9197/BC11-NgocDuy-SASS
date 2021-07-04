@@ -6,8 +6,17 @@ header {
   box-shadow: 0 2px 4px $color-white-2;
   .navbar {
     padding: $pd-6 0;
+
     .navbar-brand {
       @include styleText($fs-3, $fw-3, $color-blue-2);
+    }
+    .navbar-toggler {
+      outline: none;
+      .navbar-toggler-icon {
+        color: $color-blue-1;
+        font-size: $fs-5;
+        line-height: $fs-5;
+      }
     }
   }
   .navbar-nav {
@@ -21,9 +30,11 @@ header {
     }
     li {
       padding: $pd-1;
+      @include responsive(medium) {
+        text-align: center;
+      }
       a {
         @include styleText($fs-2, $fw-2, $color-blue-1);
-        // margin-left: $mg-2;
 
         &::after {
           content: "";
@@ -40,6 +51,17 @@ header {
             transform: scaleX(1);
           }
         }
+      }
+    }
+  }
+}
+@include responsive(small) {
+  header {
+    .navbar {
+      padding: $pd-6 * 2 $pd-3 * 2;
+      .navbar-brand {
+        font-size: $fs-8;
+        line-height: 2.5rem;
       }
     }
   }
