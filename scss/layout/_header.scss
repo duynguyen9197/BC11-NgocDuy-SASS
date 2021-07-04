@@ -1,0 +1,46 @@
+header {
+  background-color: $color-white-1;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 4px $color-white-2;
+  .navbar {
+    padding: $pd-6 0;
+    .navbar-brand {
+      @include styleText($fs-3, $fw-3, $color-blue-2);
+    }
+  }
+  .navbar-nav {
+    li:active {
+      a {
+        @include styleText($fs-2, $fw-2, $color-blue-2);
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+    li {
+      padding: $pd-1;
+      a {
+        @include styleText($fs-2, $fw-2, $color-blue-1);
+        // margin-left: $mg-2;
+
+        &::after {
+          content: "";
+          display: block;
+          background-color: $color-blue-2;
+          height: 2px;
+          width: 100%;
+          transform: scaleX(0);
+          transition: 00.5s;
+        }
+        &:hover {
+          @include styleText($fs-2, $fw-2, $color-blue-2);
+          &::after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+}

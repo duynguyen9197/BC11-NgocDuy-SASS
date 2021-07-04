@@ -1,0 +1,33 @@
+.Carousel {
+  background: {
+    image: url(./../../image/product-header-bg.jpg);
+    repeat: no-repeat;
+    size: cover;
+    position: center bottom;
+  }
+  padding: $pd-2;
+  .Carousel_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // height: $height-1;
+
+    .content--left {
+      width: $width-50;
+      h1 {
+        @include styleText($fs-4, $fw-2, $color-blue-2);
+      }
+      span {
+        @include styleText($fs-7, $fw-2, $color-blue-1);
+      }
+      p {
+        @include styleText($fs-2, $fw-1, $color-dark-1);
+        margin: $mg-1 0;
+      }
+    }
+    .content--right {
+      text-align: right;
+      @extend .content--left;
+    }
+  }
+}

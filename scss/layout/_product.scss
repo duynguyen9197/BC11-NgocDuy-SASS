@@ -1,0 +1,36 @@
+.Product {
+  background-color: $color-white-1;
+  .title {
+    @include styleText($fs-6, $fw-2, $color-blue-1);
+    text-align: center;
+    margin: $mg-4 0;
+  }
+  .Product__content {
+    @include d-flex;
+    .Product__item {
+      box-shadow: 6px 6px 12px $color-white-2, -2px -2px 4px $color-white-3;
+      padding: $pd-1 + 5;
+      margin-bottom: $mg-2;
+      width: 30%;
+
+      img {
+        box-shadow: 6px 6px 12px $color-white-2, -2px -2px 4px $color-white-3;
+      }
+      .Product__text {
+        @include d-flex;
+        h2 {
+          @include styleText($fs-7, $fw-3, $color-blue-1);
+          padding: $pd-3 0;
+        }
+
+        p {
+          width: 100%;
+          @include styleText($fs-1, $fw-1, $color-blue-1);
+        }
+        i {
+          color: $color-yellow-1;
+        }
+      }
+    }
+  }
+}

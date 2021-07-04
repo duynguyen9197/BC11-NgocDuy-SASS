@@ -1,0 +1,23 @@
+@mixin styleText($fs, $fw, $color) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $color;
+}
+@mixin styleButton($bd, $bd-radius, $color, $pd_1, $pd_2, $mg, $bg) {
+  border: $bd solid $color;
+  border-radius: $bd-radius;
+  padding: $pd_1 $pd_2;
+  margin: $mg;
+  background-color: $bg;
+}
+@mixin styleHover($bg, $color) {
+  background-color: $bg;
+  color: $color;
+  transition: 0.5s;
+}
+@mixin d-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
